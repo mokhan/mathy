@@ -7,7 +7,7 @@ module Mathy
 
     def play(games_to_play = 2, operation)
       games_to_play.times do
-        @score += 1 if operation.play_turn(x: rand(10), y: rand(20))
+        @score += 1 if operation.play_turn
       end
 
       display_results(@name, @score, games_to_play)

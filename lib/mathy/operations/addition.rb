@@ -8,8 +8,8 @@ module Mathy
         @key = "+"
       end
 
-      def play_turn(x: rand(10), y: rand(20), correct_answer: x + y)
-        @verifier.check_answer("#{x} + #{y} = ", correct_answer)
+      def play_turn(x: rand(10), y: rand(20))
+        @verifier.check_answer("#{x} + #{y} = ", x + y)
       end
 
       def matches?(other_key)
