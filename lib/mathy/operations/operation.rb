@@ -3,12 +3,14 @@ module Mathy
     class Operation
       attr_reader :key
 
-      def initialize(verification, key)
+      def initialize(verification, difficulty, key)
         @verifier = verification
+        @difficulty = difficulty
         @key = key
       end
 
-      def play_turn(operands)
+      def play_turn
+        operands = @difficulty.next_operands
         @verifier.check_answer("#{operands.join(" #{key} ")} = ", calculate(operands))
       end
 

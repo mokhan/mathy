@@ -8,8 +8,8 @@ module Mathy
       def choose_operation(console)
         verifier = Verification.new
         console.operation?([
-          Operations::Addition.new(verifier),
-          Operations::Subtraction.new(verifier)
+          Operations::Addition.new(verifier, self),
+          Operations::Subtraction.new(verifier, self)
         ])
       end
     end

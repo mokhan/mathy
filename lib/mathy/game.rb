@@ -10,7 +10,7 @@ module Mathy
       difficulty = console.difficulty?
       operation = difficulty.choose_operation(console)
       games_to_play.times do
-        @score += 1 if operation.play_turn(difficulty.next_operands)
+        @score += 1 if operation.play_turn
       end
 
       display_results(@score, games_to_play)
