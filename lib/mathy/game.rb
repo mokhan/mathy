@@ -6,7 +6,8 @@ module Mathy
     end
 
     def play(console)
-      console.display_results(@player, @score, play_turns(console))
+      turns_played = play_turns(console)
+      console.display_results(@player, @score, turns_played)
     end
 
     private

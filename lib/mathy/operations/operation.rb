@@ -17,6 +17,10 @@ module Mathy
       def matches?(other_key)
         key == other_key
       end
+
+      def calculate(operands)
+        operands.inject { |result, x| result.send(key.to_sym, x) }
+      end
     end
   end
 end
