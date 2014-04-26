@@ -4,6 +4,6 @@ require 'mathy'
 
 module Mathy
   console = Console.new
-  game = Game.new(Player.new(console.greet), console)
-  game.play(console.how_many_turns?, console.difficulty?)
+  game = Game.new(Player.new(console.greet))
+  game.play(console)
 end
