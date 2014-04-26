@@ -1,8 +1,8 @@
 module Mathy
   module Operations
     class Addition < Operation
-      def initialize(verification, difficulty)
-        super(verification, difficulty, "+")
+      def initialize(difficulty)
+        super(difficulty, "+")
       end
 
       def calculate(operands)

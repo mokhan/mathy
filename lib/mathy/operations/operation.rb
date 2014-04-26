@@ -3,10 +3,10 @@ module Mathy
     class Operation
       attr_reader :key
 
-      def initialize(verification, difficulty, key)
-        @verifier = verification
+      def initialize(difficulty, key, verification = Verification.new)
         @difficulty = difficulty
         @key = key
+        @verifier = verification
       end
 
       def play_turn
