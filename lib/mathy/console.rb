@@ -9,15 +9,9 @@ module Mathy
       prompt?("how many questions do you want?").to_i
     end
 
-    def operation?(verifier = Verification.new)
-      case prompt?("choose operation? [+-]")
-      when "+"
-        Addition.new(verifier)
-      when "-"
-        Subtraction.new(verifier)
-      else
-        Addition.new(verifier)
-      end
+    def operation?(operations)
+      selection =  prompt?("choose operation? #{operations.map(&:key).flatten}")
+      operations.find { |operation| operation.matches?(selection) }
     end
 
     def prompt?(question)
