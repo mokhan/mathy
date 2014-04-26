@@ -1,11 +1,13 @@
 module Mathy
   class Game
-    def initialize(player, score = 0)
+    def initialize(player, console, score = 0)
       @player = player
       @score = score
+      @console = console
     end
 
-    def play(games_to_play = 2, operation, difficulty)
+    def play(games_to_play = 2, difficulty)
+      operation = difficulty.choose_operation(@console)
       games_to_play.times do
         @score += 1 if operation.play_turn(difficulty.next_operands)
       end

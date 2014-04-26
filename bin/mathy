@@ -5,7 +5,6 @@ require 'mathy'
 module Mathy
   console = Console.new
   difficulty = Difficulties::GradeTwo.new
-
-  game = Game.new(Player.new(console.greet))
-  game.play(console.how_many_turns?, difficulty.choose_operation(console), difficulty)
+  game = Game.new(Player.new(console.greet), console)
+  game.play(console.how_many_turns?, difficulty)
 end
