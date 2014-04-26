@@ -7,23 +7,11 @@ module Mathy
 
     def play(console)
       games_to_play = console.how_many_turns?
-      difficulty = console.difficulty?
-      operation = difficulty.choose_operation(console)
+      operation = console.difficulty?.choose_operation(console)
       games_to_play.times do
         @score += 1 if operation.play_turn
       end
-
-      display_results(@score, games_to_play)
-    end
-
-    private
-
-    def display_results(score, games_to_play)
-      puts ""
-      puts "+++++++++++++++++++++++++++++++++++"
-      puts "You got #{score}/#{games_to_play}."
-      puts "Good bye #{@player.name}"
-      puts "+++++++++++++++++++++++++++++++++++"
+      console.display_results(@player, @score, games_to_play)
     end
   end
 end

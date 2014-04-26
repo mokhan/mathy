@@ -18,15 +18,27 @@ module Mathy
       Difficulties::GradeTwo.new
     end
 
+    def display_results(player, score, games_to_play)
+      report ""
+      report "+++++++++++++++++++++++++++++++++++"
+      report "You got #{score}/#{games_to_play}."
+      report "Good bye #{player.name}"
+      report "+++++++++++++++++++++++++++++++++++"
+    end
+
     def prompt?(question)
-      puts question
+      report question
       gets.strip
+    end
+
+    def report(message)
+      puts message
     end
 
     private
 
     def clear_screen
-      puts "\e[H\e[2J"
+      report "\e[H\e[2J"
     end
   end
 end
