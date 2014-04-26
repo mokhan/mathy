@@ -6,8 +6,8 @@ module Mathy
       end
 
       def calculate(operands)
-        operands.inject(0) do |result, x|
-          result + x
+        operands.inject do |result, x|
+          result - x
         end
       end
     end
