@@ -1,14 +1,18 @@
 module Mathy
   class Verification
+    def initialize(console)
+      @console = console
+    end
+
     def check_answer(question, correct_answer)
-      puts ""
-      print question
+      @console.report ""
+      @console.report question
       answer = gets
       if answer.to_i == correct_answer
-        print "Correct!"
+        @console.report "Correct!"
         return true
       end
-      print "The correct answer is #{correct_answer}."
+      @console.report "The correct answer is #{correct_answer}."
       false
     end
   end

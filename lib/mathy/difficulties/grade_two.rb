@@ -6,9 +6,10 @@ module Mathy
       end
 
       def choose_operation(console)
+        verifier = Verification.new(console)
         console.operation?([
-          Operations::Addition.new(self),
-          Operations::Subtraction.new(self)
+          Operations::Operation.new(self, "+", verifier),
+          Operations::Operation.new(self, "-", verifier)
         ])
       end
     end
