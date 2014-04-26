@@ -8,8 +8,9 @@ module Mathy
         @key = "-"
       end
 
-      def play_turn(x: rand(10), y: rand(20))
-        @verifier.check_answer("#{x} - #{y} = ", x - y)
+      def play_turn(difficulty)
+        operands = difficulty.next_operands
+        @verifier.check_answer("#{operands.join(" - ")} = ", operands.inject() { |result, x| result - x })
       end
 
       def matches?(other_key)

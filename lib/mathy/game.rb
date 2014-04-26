@@ -5,9 +5,9 @@ module Mathy
       @score = score
     end
 
-    def play(games_to_play = 2, operation)
+    def play(games_to_play = 2, operation, difficulty)
       games_to_play.times do
-        @score += 1 if operation.play_turn
+        @score += 1 if operation.play_turn(difficulty.next_operands)
       end
 
       display_results(@name, @score, games_to_play)
