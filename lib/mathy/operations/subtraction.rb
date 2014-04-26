@@ -8,13 +8,20 @@ module Mathy
         @key = "-"
       end
 
-      def play_turn(difficulty)
-        operands = difficulty.next_operands
-        @verifier.check_answer("#{operands.join(" - ")} = ", operands.inject() { |result, x| result - x })
+      def play_turn(operands)
+        @verifier.check_answer("#{operands.join(" #{key} ")} = ", calculate(operands))
       end
 
       def matches?(other_key)
         key == other_key
+      end
+
+      private
+
+      def calculate(operands)
+        operands.inject(0) do |result, x|
+          result + x
+        end
       end
     end
   end
