@@ -3,7 +3,7 @@ module Mathy
     class Operation
       attr_reader :key
 
-      def initialize(difficulty, key, verification = Verification.new)
+      def initialize(difficulty, key, verification)
         @difficulty = difficulty
         @key = key
         @verifier = verification
