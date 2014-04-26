@@ -3,8 +3,8 @@ require 'mathy'
 
 verifier = Mathy::Verification.new
 operations = [
-  Mathy::Addition.new(verifier),
-  Mathy::Subtraction.new(verifier)
+  Mathy::Operations::Addition.new(verifier),
+  Mathy::Operations::Subtraction.new(verifier)
 ]
 
 console = Mathy::Console.new
