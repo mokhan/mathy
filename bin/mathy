@@ -3,16 +3,9 @@
 require 'mathy'
 
 module Mathy
-  verifier = Mathy::Verification.new
-  operations = [
-    Mathy::Operations::Addition.new(verifier),
-    Mathy::Operations::Subtraction.new(verifier)
-  ]
+  console = Console.new
+  difficulty = Difficulties::GradeTwo.new
 
-  console = Mathy::Console.new
-
-  player = Player.new(console.greet)
-  game = Mathy::Game.new(player)
-  difficulty = Mathy::Difficulties::GradeTwo.new
-  game.play(console.how_many_turns?, console.operation?(operations), difficulty)
+  game = Game.new(Player.new(console.greet))
+  game.play(console.how_many_turns?, difficulty.choose_operation(console), difficulty)
 end
