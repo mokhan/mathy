@@ -7,11 +7,16 @@ module Mathy
 
     def play(console)
       games_to_play = console.how_many_turns?
-      operation = console.difficulty?.choose_operation(console)
       games_to_play.times do
-        @score += 1 if operation.play_turn
+        @score += 1 if operation(console).play_turn
       end
       console.display_results(@player, @score, games_to_play)
+    end
+
+    private
+
+    def operation(console)
+      @operation ||= console.difficulty?.choose_operation(console)
     end
   end
 end
