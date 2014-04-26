@@ -14,6 +14,10 @@ module Mathy
       operations.find { |operation| operation.matches?(selection) }
     end
 
+    def difficulty?
+      Difficulties::GradeTwo.new
+    end
+
     def prompt?(question)
       puts question
       gets.strip
