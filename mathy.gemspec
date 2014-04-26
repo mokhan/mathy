@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Mathy::VERSION
   spec.authors       = ["mo khan"]
   spec.email         = ["mo@mokhan.ca"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{a command line application to practice your math.}
+  spec.description   = %q{this is an application that my daughter and i are writing to help her practice her math.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
