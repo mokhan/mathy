@@ -18,10 +18,12 @@ module Mathy
       Difficulties::GradeTwo.new
     end
 
-    def display_results(player, score, turns_played)
+    def display_results(player, score, turns_played, started_at)
       report ""
       report "+++++++++++++++++++++++++++++++++++"
-      report "You got #{score}/#{turns_played}."
+      report "You got #{score}/#{turns_played} correct."
+      report "Your overall mark is #{(score/turns_played.to_f)*100}%."
+      report "You took #{Time.now - started_at} seconds."
       report "Good bye #{player.name}"
       report "+++++++++++++++++++++++++++++++++++"
     end
