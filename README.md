@@ -9,7 +9,11 @@ Dad: Isn't your class supposed to start by now?
 
 Daughter: Miss Brittney's not here yet.
 
-Dad: Your teacher's late again? Ugh... <grumble, grumble, grumble> Well what do you want to do?
+Dad: Your teacher's late again? Ugh... 
+
+Dad: ...grumble, grumble, grumble...
+
+Dad: Well what do you want to do?
 
 Daughter: Ummm.... can I have some gum?
 
