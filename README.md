@@ -5,7 +5,7 @@ started off as a conversation something like this...
 
 ```text
 
-Dad: Isn't your class supposed by now?
+Dad: Isn't your class supposed to start by now?
 
 Daughter: Miss Brittney's not here yet.
 
