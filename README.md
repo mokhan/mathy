@@ -59,7 +59,7 @@ Daughter: Miss Brittney's here. Bye!
 
 Then this turned into the thing we would play with before dance class.
 Then during class while I sat out in the hall, I kept hacking on this
-mathy thing. Yup... not tests... pure hacking!
+mathy thing. Yup... no tests... pure hacking!
 
 ## Installation
 
